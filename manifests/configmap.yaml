@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-atd-workflow-config
+  namespace: test-atd-ns
+  labels:
+    app.kubernetes.io/name: my-atd-workflow
+    kubernetes.azure.com/generator: devhub
+data:

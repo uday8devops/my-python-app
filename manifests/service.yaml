@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-atd-workflow
+  namespace: test-atd-ns
+  labels:
+    app.kubernetes.io/name: my-atd-workflow
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: my-atd-workflow
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
